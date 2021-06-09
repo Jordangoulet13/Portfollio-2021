@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import Header from "./components/Header.jsx";
+import Home from "./pages/Home";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import DarkTheme from "./themes/dark";
+import LightTheme from "./themes/light";
+import SolarTheme from "./themes/solar";
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState(DarkTheme);
+
+  const switchTheme = (id) => {
+    switch (id) {
+      case "DarkTheme":
+        setTheme(DarkTheme);
+        break;
+      case "LightTheme":
+        setTheme(LightTheme);
+        break;
+      case "SolarTheme":
+        setTheme(SolarTheme);
+        break;
+      default:
+        setTheme(DarkTheme);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider
+      theme={{
+        ...theme,
+        setTheme: (id) => {
+          switchTheme(id);
+        },
+      }}
+    >
+      <GlobalStyle />
+
+      <Header theme={theme} />
+      <Home />
+    </ThemeProvider>
   );
+};
+
+const GlobalStyle = createGlobalStyle`
+body{
+  background: ${(p) => p.theme.backgroundPrimaryColor};
+  min-height:100vh;
+  margin:0;
+  color:${(p) => p.theme.textPrimaryColor};
+  font-family: "Open Sans";
+  font-size: 62.5%;
 }
+
+
+`;
 
 export default App;
