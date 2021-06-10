@@ -2,9 +2,11 @@ import styled, { css, keyframes, ThemeContext } from "styled-components";
 import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCoffee,
   faAngleDoubleRight,
   faCat,
+  faBookOpen,
+  faChartBar,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -38,14 +40,26 @@ const Header = () => {
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <FontAwesomeIcon icon={faCoffee} />
-            <span className="link-text">Coffee</span>
+            <FontAwesomeIcon icon={faBookOpen} />
+            <span className="link-text">About</span>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">
+            <FontAwesomeIcon icon={faChartBar} />
+            <span className="link-text">Projects</span>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span className="link-text">Contact</span>
           </NavLink>
         </NavItem>
         <NavItem onClick={handleThemeChange}>
           <NavLink href="#">
             <FontAwesomeIcon icon={faCat} />
-            <span className="link-text">Cats</span>
+            <span className="link-text">Themify</span>
           </NavLink>
         </NavItem>
       </ul>

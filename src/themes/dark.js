@@ -1,9 +1,10 @@
 const theme = {
   id: "dark",
-  backgroundPrimaryColor: "#23232e",
-  backgroundSecondaryColor: "#141418",
-  textPrimaryColor: "#b6b6b6",
-  textSecondaryColor: "#ececec",
+  backgroundPrimaryColor: "#0B0C10",
+  backgroundSecondaryColor: "#1F2833",
+  backgroundTertiaryColor: "#2F6D6A",
+  textPrimaryColor: "#73C3BF",
+  textSecondaryColor: "#45A29E",
 };
 
 export default theme;

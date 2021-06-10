@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import Header from "./components/Header.jsx";
+import Header from "./components/header/Header.jsx";
 import Home from "./pages/Home";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import DarkTheme from "./themes/dark";
@@ -36,7 +36,7 @@ const App = () => {
     >
       <GlobalStyle />
 
-      <Header theme={theme} />
+      <Header />
       <Home />
     </ThemeProvider>
   );
@@ -50,6 +50,7 @@ body{
   color:${(p) => p.theme.textPrimaryColor};
   font-family: "Open Sans";
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 
