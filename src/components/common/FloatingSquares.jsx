@@ -3,20 +3,20 @@ import styled, { keyframes } from "styled-components";
 
 const FloatingSquares = () => {
   return (
-    <Wrapper>
-      <BubblesList>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-        <Bubbles></Bubbles>
-      </BubblesList>
-    </Wrapper>
+    <BubbleList>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+      <Bubbles></Bubbles>
+    </BubbleList>
   );
 };
 
@@ -28,22 +28,14 @@ const square = keyframes`
             transform: translateY(-70rem) rotate(600deg);
   }`;
 
-const Wrapper = styled.div`
+const BubbleList = styled.ul`
   background: ${(p) => p.theme.backgroundPrimaryColor};
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  padding: 0;
   overflow: hidden;
   z-index: -999;
-`;
-
-const BubblesList = styled.ul`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
 `;
 
 const Bubbles = styled.li`
@@ -54,7 +46,7 @@ const Bubbles = styled.li`
   height: 5rem;
   opacity: 0.15;
   background-color: ${(p) => p.theme.textSecondaryColor};
-  bottom: -16rem;
+  bottom: -15rem;
   animation: ${square} 25s infinite linear;
 
   &:nth-child(1) {
@@ -117,6 +109,20 @@ const Bubbles = styled.li`
     width: 160px;
     height: 160px;
     animation-delay: 11s;
+  }
+  &:nth-child(11) {
+    left: -20%;
+    width: 140px;
+    height: 140px;
+    animation-delay: 8s;
+    animation-duration: 30s;
+  }
+  &:nth-child(12) {
+    left: -30%;
+    width: 220px;
+    height: 220px;
+    animation-delay: 2s;
+    animation-duration: 15s;
   }
 `;
 
