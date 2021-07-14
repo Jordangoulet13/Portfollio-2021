@@ -35,7 +35,6 @@ const App = () => {
       }}
     >
       <GlobalStyle />
-
       <Header />
       <Home />
     </ThemeProvider>
@@ -52,6 +51,7 @@ body{
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
 
 
 `;

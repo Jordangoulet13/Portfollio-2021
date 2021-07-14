@@ -3,6 +3,8 @@ import styled from "styled-components";
 import FloatingSquares from "../components/common/FloatingSquares";
 import Hero from "../components/hero/Hero";
 import Technologies from "../components/technologies/Technologies";
+import About from "../components/about/About";
+import Projects from "../components/projects/Projects";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <Container>
         <Hero />
         <Technologies />
+        <About />
+        <Projects />
       </Container>
     </BackgroundWrapper>
   );
@@ -27,6 +31,7 @@ const Container = styled.main`
   overflow: auto;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   @media only screen and (max-width: 600px) {
     margin: 0;
   }

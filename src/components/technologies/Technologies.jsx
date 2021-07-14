@@ -20,9 +20,6 @@ const Container = styled.div`
   /* background-color: ${(p) => p.theme.backgroundTertiaryColor}; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  @media only screen and (max-width: 600px) {
-    justify-content: space-evenly;
-  }
+  justify-content: space-evenly;
 `;
 export default Technologies;

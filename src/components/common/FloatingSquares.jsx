@@ -25,7 +25,7 @@ const square = keyframes`
             transform: translateY(0);
   }
   100% {
-            transform: translateY(-70rem) rotate(600deg);
+            transform: translateY(-150rem) rotate(600deg);
   }`;
 
 const BubbleList = styled.ul`
@@ -34,6 +34,7 @@ const BubbleList = styled.ul`
   height: 100%;
   width: 100%;
   padding: 0;
+  margin: 0;
   overflow: hidden;
   z-index: -999;
 `;
