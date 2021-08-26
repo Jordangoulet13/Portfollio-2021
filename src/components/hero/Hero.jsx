@@ -20,17 +20,13 @@ const Hero = () => {
 const Container = styled.div`
   height: 18rem;
   width: 100%;
-  background-color: ${(p) => p.theme.backgroundTertiaryColor};
+
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: linear-gradient(
-    to bottom,
-    ${(p) => p.theme.backgroundPrimaryColor}00,
-    ${(p) => p.theme.backgroundSecondaryColor}FF
-  );
+
   @media only screen and (max-width: 600px) {
     margin: 0;
     height: 15rem;

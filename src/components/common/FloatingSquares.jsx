@@ -1,21 +1,15 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import techData from "../technologies/techData.js";
 
 const FloatingSquares = () => {
   return (
     <BubbleList>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
-      <Bubbles></Bubbles>
+      {techData.map(({ id, cardImg, title }) => (
+        <Bubbles key={id} name={title}>
+          {cardImg}
+        </Bubbles>
+      ))}
     </BubbleList>
   );
 };
@@ -43,10 +37,9 @@ const Bubbles = styled.li`
   position: absolute;
   list-style: none;
   display: block;
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
   opacity: 0.15;
-  background-color: ${(p) => p.theme.textSecondaryColor};
   bottom: -15rem;
   animation: ${square} 25s infinite linear;
 
@@ -55,8 +48,8 @@ const Bubbles = styled.li`
   }
   &:nth-child(2) {
     left: 20%;
-    width: 180px;
-    height: 180px;
+    width: 18rem;
+    height: 18rem;
     animation-delay: 2s;
     animation-duration: 17s;
   }
@@ -66,62 +59,61 @@ const Bubbles = styled.li`
   }
   &:nth-child(4) {
     left: 40%;
-    width: 260px;
-    height: 260px;
+    width: 15rem;
+    height: 15rem;
     animation-duration: 22s;
     opacity: 0.25;
-    background-color: ${(p) => p.theme.textSecondaryColor};
   }
   &:nth-child(5) {
+    width: 16rem;
+    height: 16rem;
     left: 70%;
   }
   &:nth-child(6) {
     left: 80%;
-    width: 120px;
-    height: 120px;
+    width: 9rem;
+    height: 9rem;
     animation-delay: 3s;
     opacity: 0.2;
-    background-color: ${(p) => p.theme.textSecondaryColor};
   }
   &:nth-child(7) {
-    left: 32%;
-    width: 160px;
-    height: 160px;
+    left: 50%;
+    width: 14rem;
+    height: 14rem;
     animation-delay: 7s;
   }
   &:nth-child(8) {
     left: 55%;
-    width: 20px;
-    height: 20px;
+    width: 6rem;
+    height: 6rem;
     animation-delay: 15s;
     animation-duration: 40s;
   }
   &:nth-child(9) {
     left: 25%;
-    width: 10px;
-    height: 10px;
+    width: 15rem;
+    height: 15rem;
     animation-delay: 2s;
     animation-duration: 40s;
     opacity: 0.3;
-    background-color: ${(p) => p.theme.textSecondaryColor};
   }
   &:nth-child(10) {
     left: 90%;
-    width: 160px;
-    height: 160px;
+    width: 13rem;
+    height: 13rem;
     animation-delay: 11s;
   }
   &:nth-child(11) {
     left: -20%;
-    width: 140px;
-    height: 140px;
+    width: 14rem;
+    height: 14rem;
     animation-delay: 8s;
     animation-duration: 30s;
   }
   &:nth-child(12) {
     left: -30%;
-    width: 220px;
-    height: 220px;
+    width: 17rem;
+    height: 17rem;
     animation-delay: 2s;
     animation-duration: 15s;
   }

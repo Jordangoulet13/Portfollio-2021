@@ -7,9 +7,10 @@ import {
   faBookOpen,
   faChartBar,
   faEnvelope,
+  faDog,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ animate }) => {
   const { setTheme } = useContext(ThemeContext);
 
   const [currentTheme, setCurrentTheme] = useState("LightTheme");
@@ -24,6 +25,10 @@ const Header = () => {
       setTheme(currentTheme);
       setCurrentTheme("DarkTheme");
     }
+  };
+
+  const handleAnimateChange = () => {
+    animate();
   };
   return (
     <NavMenu>
@@ -56,8 +61,14 @@ const Header = () => {
             <span className="link-text">Contact</span>
           </NavLink>
         </NavItem>
+        <NavItem onClick={handleAnimateChange}>
+          <NavLink>
+            <FontAwesomeIcon icon={faDog} />
+            <span className="link-text">Animate</span>
+          </NavLink>
+        </NavItem>
         <NavItem onClick={handleThemeChange}>
-          <NavLink href="#">
+          <NavLink>
             <FontAwesomeIcon icon={faCat} />
             <span className="link-text">Themify</span>
           </NavLink>
@@ -127,7 +138,7 @@ const NavMenu = styled.nav`
 const NavItem = styled.li`
   width: 100%;
 
-  &:last-child {
+  :nth-child(5) {
     margin-top: auto;
     @media only screen and (max-width: 600px) {
       margin-top: 0;
@@ -176,6 +187,7 @@ const NavLink = styled.a`
     margin: 0;
   }
   &:hover {
+    cursor: pointer;
     filter: grayscale(0%) opacity(1);
     background: ${(p) => p.theme.backgroundSecondaryColor};
     color: ${(p) => p.theme.textSecondaryColor};

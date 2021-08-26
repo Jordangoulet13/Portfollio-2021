@@ -13,7 +13,7 @@ const Projects = () => {
 const Container = styled.div`
   height: auto;
   width: 100%;
-  background-color: ${(p) => p.theme.backgroundSecondaryColor};
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

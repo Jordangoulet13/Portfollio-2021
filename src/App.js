@@ -9,6 +9,12 @@ import SolarTheme from "./themes/solar";
 
 const App = () => {
   const [theme, setTheme] = useState(DarkTheme);
+  const [animateSquares, setAnimateSquares] = useState(false);
+
+  const getAnimate = () => {
+    setAnimateSquares(!animateSquares);
+    console.log(animateSquares);
+  };
 
   const switchTheme = (id) => {
     switch (id) {
@@ -35,13 +41,16 @@ const App = () => {
       }}
     >
       <GlobalStyle />
-      <Header />
-      <Home />
+      <Header animate={getAnimate} />
+      <Home isAnimation={animateSquares} />
     </ThemeProvider>
   );
 };
 
 const GlobalStyle = createGlobalStyle`
+html{
+  overflow-x: hidden;
+}
 body{
   background: ${(p) => p.theme.backgroundPrimaryColor};
   min-height:100vh;
@@ -50,6 +59,7 @@ body{
   font-family: "Open Sans";
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 

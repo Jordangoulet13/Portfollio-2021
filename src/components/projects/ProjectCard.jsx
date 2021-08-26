@@ -20,7 +20,7 @@ const ProjectCard = () => {
 const Container = styled.div`
   height: auto;
   width: 100%;
-  background-color: ${(p) => p.theme.backgroundSecondaryColor};
+
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
