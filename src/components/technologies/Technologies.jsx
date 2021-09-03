@@ -20,7 +20,7 @@ const Technologies = ({ animate }) => {
 };
 const rotate = keyframes`
    0% {
-    transform: translateX(0) ;
+    transform: scale(1) ;
           opacity: 1;
   }
 
@@ -29,7 +29,7 @@ const rotate = keyframes`
   }
 
   100% {
-   transform: translateX(100rem);
+   transform: scale(0) ;
    opacity: 0;
   
             
@@ -42,6 +42,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  overflow-x: hidden;
   animation: ${(p) =>
     p.animate
       ? css`

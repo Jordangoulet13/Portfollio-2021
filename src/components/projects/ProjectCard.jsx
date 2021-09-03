@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import devFinderImage from "../../assets/Projects/Devfinder.png";
+import rainCityImage from "../../assets/Projects/RainCity.png";
 
 const ProjectCard = () => {
   return (
@@ -11,6 +12,14 @@ const ProjectCard = () => {
       <ProjectInfo>
         <a href="https://developer-finder.vercel.app/" target="__blank">
           DevFinder
+        </a>
+      </ProjectInfo>
+      <ProjectImageContainer>
+        <ProjectImage src={rainCityImage} />
+      </ProjectImageContainer>
+      <ProjectInfo>
+        <a href="https://boardgame-store.vercel.app/" target="__blank">
+          RainCity
         </a>
       </ProjectInfo>
     </Container>

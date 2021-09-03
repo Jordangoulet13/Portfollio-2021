@@ -83,7 +83,7 @@ const Bubbles = styled.li`
     animation-delay: 7s;
   }
   &:nth-child(8) {
-    left: 55%;
+    left: -55%;
     width: 6rem;
     height: 6rem;
     animation-delay: 15s;
