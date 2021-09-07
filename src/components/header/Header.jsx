@@ -61,12 +61,7 @@ const Header = ({ animate }) => {
             <span className="link-text">Contact</span>
           </NavLink>
         </NavItem>
-        <NavItem onClick={handleAnimateChange}>
-          <NavLink>
-            <FontAwesomeIcon icon={faDog} />
-            <span className="link-text">Animate</span>
-          </NavLink>
-        </NavItem>
+
         <NavItem onClick={handleThemeChange}>
           <NavLink>
             <FontAwesomeIcon icon={faCat} />

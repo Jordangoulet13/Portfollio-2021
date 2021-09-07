@@ -5,6 +5,7 @@ const theme = {
   backgroundTertiaryColor: "#EDD182",
   textPrimaryColor: "#576e75",
   textSecondaryColor: "#35535c",
+  textTertiaryColor: "#C6C6C6",
 };
 
 export default theme;

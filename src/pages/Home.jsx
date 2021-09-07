@@ -5,17 +5,16 @@ import Hero from "../components/hero/Hero";
 import Technologies from "../components/technologies/Technologies";
 import About from "../components/about/About";
 import Projects from "../components/projects/Projects";
+import TechnologiesSwiper from "../components/technologies/TechnologiesSwiper";
 
 const Home = ({ isAnimation }) => {
   return (
     <BackgroundWrapper>
-      {isAnimation ? <FloatingSquares /> : null}
+      <FloatingSquares />
       <Container>
         <Hero />
-        <Technologies animate={isAnimation} />
-        <SubContainer animate={isAnimation}>
-          <Projects />
-        </SubContainer>
+        <TechnologiesSwiper />
+        <Projects />
       </Container>
     </BackgroundWrapper>
   );
