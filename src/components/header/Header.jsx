@@ -13,23 +13,20 @@ import {
 const Header = ({ animate }) => {
   const { setTheme } = useContext(ThemeContext);
 
-  const [currentTheme, setCurrentTheme] = useState("LightTheme");
+  const [currentTheme, setCurrentTheme] = useState("DarkTheme");
   const handleThemeChange = () => {
     if (currentTheme === "DarkTheme") {
-      setCurrentTheme("LightTheme");
+      setCurrentTheme("SolarTheme");
       setTheme(currentTheme);
     } else if (currentTheme === "LightTheme") {
-      setCurrentTheme("SolarTheme");
+      setCurrentTheme("DarkTheme");
       setTheme(currentTheme);
     } else {
       setTheme(currentTheme);
-      setCurrentTheme("DarkTheme");
+      setCurrentTheme("LightTheme");
     }
   };
 
-  const handleAnimateChange = () => {
-    animate();
-  };
   return (
     <NavMenu>
       <ul>
@@ -101,6 +98,7 @@ const NavMenu = styled.nav`
       }
       .logo {
         margin-left: 0;
+        font-size: 0.9rem;
         animation: ${moveInLeft} 1s ease-out;
       }
       .logoSVG {
@@ -173,7 +171,7 @@ const NavLink = styled.a`
   height: 5rem;
   color: ${(p) => p.theme.textPrimaryColor};
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
+  filter: grayscale(100%) opacity(0.5);
   transition: 600ms;
   font-size: 1.5rem;
   margin-left: 1.5rem;

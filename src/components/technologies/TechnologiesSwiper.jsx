@@ -10,10 +10,10 @@ import styled from "styled-components";
 import "./SwiperStyles.css";
 import "swiper/swiper-bundle.min.css";
 // import Swiper core and required modules
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 // Import Swiper styles
 
@@ -22,6 +22,11 @@ const TechnologiesSwiper = () => {
     <>
       <Heading> My Technologies</Heading>
       <Swiper
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        effect={"fade"}
         slidesPerView={3}
         spaceBetween={30}
         slidesPerGroup={3}

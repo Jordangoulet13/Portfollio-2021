@@ -28,7 +28,7 @@ const ChangeLocation = keyframes`
 
 const Greeting = styled.div`
   overflow: hidden;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 4rem;
   color: ${(p) => p.theme.textPrimaryColor};
 `;
@@ -36,7 +36,7 @@ const Greeting = styled.div`
 const GreetingContainer = styled.div`
   font-weight: 600;
   overflow: hidden;
-  height: 4.5rem;
+  height: 3.7rem;
 
   p {
     display: inline;
@@ -47,7 +47,7 @@ const GreetingContainer = styled.div`
 
 const GreetingList = styled.ul`
   margin-top: 0;
-  padding-left: 5.5rem;
+  padding-left: 9.5rem;
   text-align: left;
   list-style: none;
   animation: ${ChangeLocation} 10s infinite;

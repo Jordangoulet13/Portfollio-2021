@@ -8,7 +8,7 @@ import LightTheme from "./themes/light";
 import SolarTheme from "./themes/solar";
 
 const App = () => {
-  const [theme, setTheme] = useState(DarkTheme);
+  const [theme, setTheme] = useState(LightTheme);
   const [animateSquares, setAnimateSquares] = useState(false);
 
   const getAnimate = () => {
@@ -21,14 +21,14 @@ const App = () => {
       case "DarkTheme":
         setTheme(DarkTheme);
         break;
-      case "LightTheme":
-        setTheme(LightTheme);
-        break;
       case "SolarTheme":
         setTheme(SolarTheme);
         break;
+      case "LightTheme":
+        setTheme(LightTheme);
+        break;
       default:
-        setTheme(DarkTheme);
+        setTheme(LightTheme);
     }
   };
   return (
@@ -56,7 +56,7 @@ body{
   min-height:100vh;
   margin:0;
   color:${(p) => p.theme.textPrimaryColor};
-  font-family: "Open Sans";
+  font-family: "Montserrat";
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;

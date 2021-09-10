@@ -2,34 +2,44 @@ import React from "react";
 import styled, { keyframes, css } from "styled-components";
 import profileImage from "../../assets/JordanGoulet.jpg";
 import GreetingText from "./Greeting";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFile } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
     <Container>
       <IntroInfo>
-        <CursiveText html>{"<html>"}</CursiveText>
-        <CursiveText pretty bottom>
-          {"<body>"}
-        </CursiveText>
-        <HeadingContainer>
-          <CursiveText>{"<h1>"}</CursiveText>
-          <GreetingText />
-          <HeadingContent>
-            Welcome to my website, I’m Jordan Goulet. I am passionate about
-            creating beautiful design content and implementing into real-life
-            websites. Currently working in Vancouver.
-          </HeadingContent>
-
-          <CursiveText>{"</h1>"}</CursiveText>
-        </HeadingContainer>
-        <CursiveText pretty top>
-          {"</body>"}
-        </CursiveText>
-        <CursiveText pretty html>
-          {"</html>"}
-        </CursiveText>
+        <GreetingText />
+        <HeadingContent>
+          Welcome to my website, I’m <span>Jordan Goulet</span>.<br />
+          I'm a <span>Full Stack Developer</span>.
+          <NavMenu>
+            <NavLink
+              href="https://github.com/Jordangoulet13"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </NavLink>
+            <NavLink
+              href="https://github.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </NavLink>
+            <NavLink
+              href="https://github.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Resume"
+            >
+              <FontAwesomeIcon icon={faFile} />
+            </NavLink>
+          </NavMenu>
+        </HeadingContent>
       </IntroInfo>
-      <ProfileImage />
     </Container>
   );
 };
@@ -37,11 +47,11 @@ const Hero = () => {
 const Container = styled.div`
   height: 100vh;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  opacity: 0.8;
 
   @media only screen and (max-width: 600px) {
     margin: 0;
@@ -93,13 +103,35 @@ const CursiveText = styled.span`
         `};
 `;
 
-const HeadingContainer = styled.div`
-  margin-left: 5rem;
-`;
 const HeadingContent = styled.h1`
   font-size: 1.5rem;
+
+  span {
+    color: ${(p) => p.theme.textTertiaryColor};
+  }
 `;
 
-const BigJ = styled.div``;
+const NavMenu = styled.div`
+  display: flex;
+  height: 20px;
+  margin-top: 2rem;
+`;
+
+const NavLink = styled.a`
+  height: 5rem;
+  color: ${(p) => p.theme.textTertiaryColor};
+  text-decoration: none;
+  transition: 600ms;
+  font-size: 2.5rem;
+  margin-left: 4rem;
+  &:hover {
+    cursor: pointer;
+    color: ${(p) => p.theme.textSecondaryColor};
+  }
+
+  &:first-child {
+    margin: 0;
+  }
+`;
 
 export default Hero;
