@@ -56,7 +56,7 @@ body{
   min-height:100vh;
   margin:0;
   color:${(p) => p.theme.textPrimaryColor};
-  font-family: "Montserrat";
+  font-family: "Open Sans";
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;

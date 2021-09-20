@@ -25,7 +25,7 @@ const square = keyframes`
 const BubbleList = styled.ul`
   background: ${(p) => p.theme.backgroundPrimaryColor};
   position: absolute;
-  height: 100%;
+  height: 90%;
   width: 100%;
   padding: 0;
   margin: 0;

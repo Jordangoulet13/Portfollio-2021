@@ -5,7 +5,9 @@ import Hero from "../components/hero/Hero";
 import Technologies from "../components/technologies/Technologies";
 import About from "../components/about/About";
 import Projects from "../components/projects/Projects";
+import Contact from "../components/contact/Contact";
 import TechnologiesSwiper from "../components/technologies/TechnologiesSwiper";
+import Footer from "../components/footer/Footer";
 
 const Home = ({ isAnimation }) => {
   return (
@@ -15,6 +17,8 @@ const Home = ({ isAnimation }) => {
         <Hero />
         <TechnologiesSwiper />
         <Projects />
+        <Contact />
+        <Footer />
       </Container>
     </BackgroundWrapper>
   );

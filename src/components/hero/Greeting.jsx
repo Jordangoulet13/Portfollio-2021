@@ -35,8 +35,7 @@ const Greeting = styled.div`
 
 const GreetingContainer = styled.div`
   font-weight: 600;
-  overflow: hidden;
-  height: 3.7rem;
+  height: 3.75rem;
 
   p {
     display: inline;

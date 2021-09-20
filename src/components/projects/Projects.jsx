@@ -4,9 +4,12 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <Container>
-      <ProjectCard />
-    </Container>
+    <>
+      <Heading>Projects</Heading>
+      <Container>
+        <ProjectCard />
+      </Container>
+    </>
   );
 };
 
@@ -17,6 +20,13 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+`;
+const Heading = styled.h1`
+  color: ${(p) => p.theme.textTertiaryColor};
+  margin-left: 5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid;
+  width: 85%;
 `;
 
 export default Projects;
