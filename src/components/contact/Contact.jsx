@@ -18,9 +18,11 @@ const Contact = () => {
       .then(
         (result) => {
           window.alert("Thank you! I will get back to you shortly.");
+          console.log(result);
         },
         (error) => {
           window.alert("Sorry, something went wrong. Please try again later.");
+          console.log(error);
         }
       );
   };
