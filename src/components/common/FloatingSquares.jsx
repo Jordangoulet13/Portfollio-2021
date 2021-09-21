@@ -20,7 +20,17 @@ const square = keyframes`
   }
   100% {
             transform: translateY(-150rem) rotate(600deg);
+            
   }`;
+
+const squareLong = keyframes`
+0% {
+         transform: translateY(0);
+}
+100% {
+         transform: translateY(-210rem) rotate(600deg);
+         
+}`;
 
 const BubbleList = styled.ul`
   background: ${(p) => p.theme.backgroundPrimaryColor};
@@ -43,6 +53,9 @@ const Bubbles = styled.li`
   bottom: -15rem;
   animation: ${square} 25s infinite linear;
 
+  @media only screen and (max-width: 650px) {
+    animation: ${squareLong} 25s infinite linear;
+  }
   &:nth-child(1) {
     left: 10%;
   }
