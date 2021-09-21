@@ -86,8 +86,6 @@ const IntroInfo = styled.span`
   height: auto;
   flex-direction: column;
   font-size: 1.2rem;
-
-  margin-left: 2rem;
 `;
 
 const HeadingContent = styled.h1`
