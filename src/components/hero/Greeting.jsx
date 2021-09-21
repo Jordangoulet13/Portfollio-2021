@@ -60,6 +60,4 @@ const GreetingList = styled.ul`
   }
 `;
 
-const IntroInfo = styled.span``;
-
 export default GreetingText;

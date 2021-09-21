@@ -35,6 +35,9 @@ const Footer = () => {
 const NavMenu = styled.div`
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 650px) {
+    margin: 2rem 0 5rem;
+  }
 `;
 
 const NavLink = styled.a`

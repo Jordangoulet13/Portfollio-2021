@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { css, keyframes } from "styled-components";
 import TechCard from "./TechCard";
 import techData from "./techData";

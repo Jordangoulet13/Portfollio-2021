@@ -1,5 +1,6 @@
 import styled, { css, keyframes, ThemeContext } from "styled-components";
 import React, { useContext, useState } from "react";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDoubleRight,
@@ -7,7 +8,6 @@ import {
   faBookOpen,
   faChartBar,
   faEnvelope,
-  faDog,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ animate }) => {
@@ -31,32 +31,40 @@ const Header = ({ animate }) => {
     <NavMenu>
       <ul>
         <NavItem logo>
-          <NavLink href="#">
-            <span className="link-text logo">Jordan Goulet</span>
-            <FontAwesomeIcon
-              icon={faAngleDoubleRight}
-              size="2x"
-              className="logoSVG"
-            />
-          </NavLink>
+          <Link to="home" smooth duration={1000}>
+            <NavLink>
+              <span className="link-text logo">Jordan Goulet</span>
+              <FontAwesomeIcon
+                icon={faAngleDoubleRight}
+                size="2x"
+                className="logoSVG"
+              />
+            </NavLink>
+          </Link>
         </NavItem>
         <NavItem>
-          <NavLink href="#">
-            <FontAwesomeIcon icon={faBookOpen} />
-            <span className="link-text">About</span>
-          </NavLink>
+          <Link to="about" smooth duration={1000}>
+            <NavLink>
+              <FontAwesomeIcon icon={faBookOpen} />
+              <span className="link-text">About</span>
+            </NavLink>
+          </Link>
         </NavItem>
         <NavItem>
-          <NavLink href="#">
-            <FontAwesomeIcon icon={faChartBar} />
-            <span className="link-text">Projects</span>
-          </NavLink>
+          <Link to="projects" smooth duration={1000}>
+            <NavLink>
+              <FontAwesomeIcon icon={faChartBar} />
+              <span className="link-text">Projects</span>
+            </NavLink>{" "}
+          </Link>
         </NavItem>
         <NavItem>
-          <NavLink href="#">
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span className="link-text">Contact</span>
-          </NavLink>
+          <Link to="contact" smooth duration={1000}>
+            <NavLink>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span className="link-text">Contact</span>
+            </NavLink>
+          </Link>
         </NavItem>
 
         <NavItem onClick={handleThemeChange}>

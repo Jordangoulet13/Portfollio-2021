@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import styled, { css, keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import FloatingSquares from "../components/common/FloatingSquares";
 import Hero from "../components/hero/Hero";
-import Technologies from "../components/technologies/Technologies";
-import About from "../components/about/About";
 import Projects from "../components/projects/Projects";
 import Contact from "../components/contact/Contact";
 import TechnologiesSwiper from "../components/technologies/TechnologiesSwiper";
@@ -26,20 +24,6 @@ const Home = ({ isAnimation }) => {
 
 export default Home;
 
-const moveUp = keyframes`
-   0% {
-    transform: translateY(0) ;
-         
-  }
-
-
-  100% {
-   transform: translateY(-30rem);
-   
-  
-            
-  }`;
-
 const BackgroundWrapper = styled.div`
   position: relative;
   background-color: ${(p) => p.theme.backgroundTertiaryColor};
@@ -59,13 +43,4 @@ const Container = styled.main`
   @media only screen and (max-width: 650px) {
     margin: 0 1rem;
   }
-`;
-
-const SubContainer = styled.div`
-  animation: ${(p) =>
-    p.animate
-      ? css`
-          ${moveUp} 4s ease-out 0s 1 normal forwards;
-        `
-      : ""};
 `;

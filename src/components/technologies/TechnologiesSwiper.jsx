@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import TechCard from "./TechCard";
@@ -19,7 +19,7 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const TechnologiesSwiper = () => {
   return (
-    <>
+    <section id="about">
       <Heading> My Technologies</Heading>
       <Swiper
         autoplay={{
@@ -39,12 +39,12 @@ const TechnologiesSwiper = () => {
         className="mySwiper"
       >
         {techData.map(({ id, cardImg, title }) => (
-          <SwiperSlide>
-            <TechCard key={id} name={title} svg={cardImg} num={id} />
+          <SwiperSlide key={id}>
+            <TechCard name={title} svg={cardImg} num={id} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </section>
   );
 };
 

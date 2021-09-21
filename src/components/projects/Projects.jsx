@@ -4,12 +4,13 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <>
+    <section id="projects">
       <Heading>Projects</Heading>
+
       <Container>
         <ProjectCard />
       </Container>
-    </>
+    </section>
   );
 };
 
