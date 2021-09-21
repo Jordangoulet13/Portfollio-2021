@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
+import Fade from "react-reveal/Fade";
 
 const Projects = () => {
   return (
     <section id="projects">
-      <Heading>Projects</Heading>
+      <Fade left={true} duration={750} delay={500} distance="50px">
+        <Heading>Projects</Heading>
+      </Fade>
 
       <Container>
         <ProjectCard />

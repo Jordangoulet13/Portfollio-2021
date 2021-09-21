@@ -46,7 +46,7 @@ const Header = ({ animate }) => {
           <Link to="about" smooth duration={1000}>
             <NavLink>
               <FontAwesomeIcon icon={faBookOpen} />
-              <span className="link-text">About</span>
+              <span className="link-text">Technologies</span>
             </NavLink>
           </Link>
         </NavItem>

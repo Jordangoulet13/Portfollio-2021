@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import devFinderImage from "../../assets/Projects/Devfinder.png";
 import rainCityImage from "../../assets/Projects/RainCity.png";
+import crwnClothing from "../../assets/Projects//crwnClothing.png";
 
 const ProjectCard = () => {
   return (
@@ -56,6 +57,37 @@ const ProjectCard = () => {
             </a>
             <a
               href="https://github.com/Jordangoulet13/developer-finder"
+              target="__blank"
+            >
+              <Info>Github</Info>
+            </a>
+          </LinksContainer>
+        </ProjectInfo>
+      </Fade>
+
+      <Fade left={true} duration={1000} delay={500} distance="30px">
+        <ProjectImageContainer>
+          <ProjectImage src={crwnClothing} />
+        </ProjectImageContainer>
+
+        <ProjectInfo>
+          <Title>CRWN Clothing</Title>
+          <Info>
+            An e-commerce clothing store that allows users to create an account
+            and make purchases. Created using React front-end along side redux.
+            This store also conencts to the stripe api to make payments using a
+            demo account.
+          </Info>
+
+          <LinksContainer>
+            <a
+              href="https://crwn-clothing-six-theta.vercel.app/"
+              target="__blank"
+            >
+              <Info>Live Site</Info>
+            </a>
+            <a
+              href="https://github.com/Jordangoulet13/clothing-store"
               target="__blank"
             >
               <Info>Github</Info>

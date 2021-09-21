@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import TechCard from "./TechCard";
 import techData from "./techData";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 // Import Swiper styles
 import "./SwiperStyles.css";
@@ -20,7 +21,9 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 const TechnologiesSwiper = () => {
   return (
     <section id="about">
-      <Heading> My Technologies</Heading>
+      <Fade left={true} duration={750} delay={500} distance="50px">
+        <Heading> My Technologies</Heading>
+      </Fade>
       <Swiper
         autoplay={{
           delay: 5000,
