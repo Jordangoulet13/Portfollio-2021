@@ -12,8 +12,14 @@ const Hero = () => {
       <IntroInfo>
         <GreetingText />
         <HeadingContent>
-          Welcome to my website, I’m <span>Jordan Goulet</span>.<br />
-          I'm a <span>Full Stack Developer</span>.
+          <Text>
+            Welcome to my website, I’m <span>Jordan Goulet</span>.<br />
+            I'm a <span>Full Stack Developer</span>.
+          </Text>
+          <Text small>
+            I’m <span>Jordan Goulet</span>.<br />A{" "}
+            <span>Full Stack Developer</span>.
+          </Text>
           <NavMenu>
             <NavLink
               href="https://github.com/Jordangoulet13"
@@ -50,12 +56,22 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   position: relative;
   opacity: 0.8;
 
-  @media only screen and (max-width: 600px) {
-    margin: 0;
+  @media only screen and (max-width: 650px) {
+    margin: 5rem 0;
     height: 15rem;
+    text-align: center;
+  }
+`;
+
+const Text = styled.div`
+  display: ${(p) => (p.small ? "none" : "")};
+  @media only screen and (max-width: 650px) {
+    display: ${(p) => (p.small ? "block" : "none")};
+    font-size: 2rem;
   }
 `;
 
@@ -67,7 +83,7 @@ const ProfileImage = styled.div`
   background-position: top;
   border: 5px solid ${(p) => p.theme.backgroundPrimaryColor};
   border-radius: 50%;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     width: 8rem;
     height: 8rem;
   }
@@ -78,12 +94,8 @@ const IntroInfo = styled.span`
   height: auto;
   flex-direction: column;
   font-size: 1.2rem;
-  width: 50%;
-  margin-left: 2rem;
 
-  @media only screen and (max-width: 600px) {
-    display: none;
-  }
+  margin-left: 2rem;
 `;
 
 const CursiveText = styled.span`
@@ -115,6 +127,9 @@ const NavMenu = styled.div`
   display: flex;
   height: 20px;
   margin-top: 2rem;
+  @media only screen and (max-width: 650px) {
+    justify-content: center;
+  }
 `;
 
 const NavLink = styled.a`

@@ -31,6 +31,9 @@ const Greeting = styled.div`
   font-size: 3rem;
   line-height: 4rem;
   color: ${(p) => p.theme.textPrimaryColor};
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const GreetingContainer = styled.div`

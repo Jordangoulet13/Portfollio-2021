@@ -56,8 +56,8 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  @media only screen and (max-width: 600px) {
-    margin: 0;
+  @media only screen and (max-width: 650px) {
+    margin: 0 1rem;
   }
 `;
 

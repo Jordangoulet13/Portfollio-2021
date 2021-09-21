@@ -66,6 +66,9 @@ const Container = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProjectImageContainer = styled.div`
@@ -76,6 +79,9 @@ const ProjectImageContainer = styled.div`
 const ProjectImage = styled.img`
   height: 25rem;
   width: 30rem;
+  @media only screen and (max-width: 650px) {
+    width: 25rem;
+  }
 `;
 
 const ProjectInfo = styled.div`
@@ -84,6 +90,9 @@ const ProjectInfo = styled.div`
   align-self: center;
   flex-direction: column;
   width: 80%;
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 const Info = styled.p`
@@ -112,6 +121,8 @@ const LinksContainer = styled.div`
   }
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin: 0;
+`;
 
 export default ProjectCard;

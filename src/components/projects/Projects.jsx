@@ -27,6 +27,10 @@ const Heading = styled.h1`
   font-size: 2rem;
   border-bottom: 1px solid;
   width: 85%;
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+    margin-left: 0rem;
+  }
 `;
 
 export default Projects;

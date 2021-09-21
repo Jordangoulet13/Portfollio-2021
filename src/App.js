@@ -50,6 +50,17 @@ const App = () => {
 const GlobalStyle = createGlobalStyle`
 html{
   overflow-x: hidden;
+  font-size: 100%;
+    @media (max-width:940px){
+    font-size:80%;
+  }
+  @media (max-width:890px){
+    font-size:70%;
+  }
+  @media (max-width:890px){
+    font-size:90%;
+  }
+
 }
 body{
   background: ${(p) => p.theme.backgroundPrimaryColor};
@@ -57,9 +68,10 @@ body{
   margin:0;
   color:${(p) => p.theme.textPrimaryColor};
   font-family: "Open Sans";
-  font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;
+
+
 }
 
 

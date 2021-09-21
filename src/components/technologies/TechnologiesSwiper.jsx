@@ -54,6 +54,10 @@ const Heading = styled.h1`
   font-size: 2rem;
   border-bottom: 1px solid;
   width: 85%;
+  @media only screen and (max-width: 650px) {
+    margin: 0;
+    width: 100%;
+  }
 `;
 
 export default TechnologiesSwiper;

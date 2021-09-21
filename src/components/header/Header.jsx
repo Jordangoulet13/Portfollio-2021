@@ -133,7 +133,7 @@ const NavItem = styled.li`
 
   :nth-child(5) {
     margin-top: auto;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 650px) {
       margin-top: 0;
     }
   }
@@ -157,7 +157,7 @@ const NavItem = styled.li`
             transform: rotate(0deg);
             transition: transform 600ms;
           }
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 650px) {
             margin-bottom: 0;
             display: none;
           }
@@ -175,7 +175,7 @@ const NavLink = styled.a`
   transition: 600ms;
   font-size: 1.5rem;
   margin-left: 1.5rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     justify-content: space-around;
     margin: 0;
   }
