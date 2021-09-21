@@ -70,6 +70,9 @@ const FormInput = styled.input`
   padding: 4px 20px 0;
   width: 100%;
   margin: 1rem 0;
+  ::placeholder {
+    color: ${(p) => p.theme.textPrimaryColor};
+  }
 `;
 
 const FormTextArea = styled.textarea`
@@ -83,6 +86,10 @@ const FormTextArea = styled.textarea`
   width: 100%;
   margin: 1rem 0;
   color: ${(p) => p.theme.textPrimaryColor};
+
+  ::placeholder {
+    color: ${(p) => p.theme.textPrimaryColor};
+  }
 `;
 
 const StyledButton = styled.button`
@@ -90,7 +97,7 @@ const StyledButton = styled.button`
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
-  color: #eee;
+  color: ${(p) => p.theme.textPrimaryColor};
   cursor: pointer;
   font-size: 18px;
   height: 50px;
