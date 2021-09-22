@@ -19,7 +19,7 @@ const square = keyframes`
             transform: translateY(0);
   }
   100% {
-            transform: translateY(-150rem) rotate(600deg);
+            transform: translateY(-200rem) rotate(600deg);
             
   }`;
 
