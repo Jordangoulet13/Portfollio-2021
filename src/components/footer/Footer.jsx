@@ -14,14 +14,14 @@ const Footer = () => {
         <FontAwesomeIcon icon={faGithub} />
       </NavLink>
       <NavLink
-        href="https://github.com/"
+        href="https://www.linkedin.com/in/jordan-goulet-6547b5195/"
         rel="noopener noreferrer"
         target="_blank"
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </NavLink>
       <NavLink
-        href="https://github.com/"
+        href="https://drive.google.com/file/d/1Z2EIfHWGUzl6yT0Adm9VxlIdSE-D27l5/view?usp=sharing"
         rel="noopener noreferrer"
         target="_blank"
         title="Resume"
