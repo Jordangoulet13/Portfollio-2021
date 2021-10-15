@@ -15,10 +15,11 @@ const ProjectCard = () => {
 
         <ProjectInfo>
           <Title>RainCity Games</Title>
+          <span>React App</span>
           <Info>
             This is an e-commerce web application built with a Firebase Backend.
             Also, Stripe was implemented as its payment gateway. For the
-            deployment, I chose Vercel as my cloud service. In this project,
+            deployment, I chose Vercel as my hosting service. In this project,
             users can search for any boardgames, toys and trading cards they
             like through the filter system. This system also allows filtering by
             price, category and name. Users can add/remove items to their cart
@@ -44,6 +45,7 @@ const ProjectCard = () => {
         </ProjectImageContainer>
         <ProjectInfo>
           <Title>DevFinder</Title>
+          <span>React App</span>
           <Info>
             DevFinder is a full-stack application that allows employers and
             future employees to connect and share information. This CRUD app
@@ -72,6 +74,7 @@ const ProjectCard = () => {
 
         <ProjectInfo>
           <Title>CRWN Clothing</Title>
+          <span>React App</span>
           <Info>
             An e-commerce clothing store that allows users to create an account
             and make purchases. Created using React front-end along side redux.
