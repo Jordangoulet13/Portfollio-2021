@@ -40,7 +40,7 @@ const Hero = () => {
                   <FontAwesomeIcon icon={faLinkedin} />
                 </NavLink>
                 <NavLink
-                  href="https://drive.google.com/file/d/14KN6RJrJ5cN5ypawB6DeAP6DoufJwqxg/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1ga3_l49MIs9M5wOhmxdrKLA1SEaOEQZJ/view?usp=sharing"
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Resume"
